@@ -8,6 +8,7 @@ package code.codingbat.string1;
  * extraEnd("ab") → "ababab"
  * extraEnd("Hi") → "HiHiHi"
  */
+
 public class ExtraEnd {
     public static void main(String[] args) {
         System.out.println(extraEnd("Hello"));
