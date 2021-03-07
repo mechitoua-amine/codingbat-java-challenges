@@ -1,12 +1,12 @@
 package code.codingbat.warmup2;
 
-/*
-Given a string, return a version where all the "x" have been removed.
-Except an "x" at the very start or end should not be removed.
+/**
+ * Given a string, return a version where all the "x" have been removed.
+ * Except an "x" at the very start or end should not be removed.
 
-stringX("xxHxix") → "xHix"
-stringX("abxxxcd") → "abcd"
-stringX("xabxxxcdx") → "xabcdx"
+ * stringX("xxHxix") → "xHix"
+ * stringX("abxxxcd") → "abcd"
+ * stringX("xabxxxcdx") → "xabcdx"
  */
 
 public class StringX {
