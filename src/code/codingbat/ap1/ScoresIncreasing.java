@@ -16,7 +16,11 @@ public class ScoresIncreasing {
         System.out.println(scoresIncreasing(1, 1, 4));
     }
 
-    public static boolean scoresIncreasing(int... nums) {
-        // code here
+    public static boolean scoresIncreasing(int... scores) {
+        for (int i = 1; i <= scores.length-2; i++) {
+            if (scores[i] > scores[i+1])
+                return false;
+        }
+        return true;
     }
 }
