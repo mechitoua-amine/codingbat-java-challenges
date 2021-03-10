@@ -29,7 +29,6 @@ public class WordsWithoutList {
             if (word.length() != n)
                 newArr.add(word);
         }
-
         return newArr;
     }
 }
