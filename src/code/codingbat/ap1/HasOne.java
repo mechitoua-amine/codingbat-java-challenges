@@ -17,6 +17,9 @@ class HasOne {
     }
 
     public static boolean hasOne(int n) {
-        // implementation
+        int ones = n % 10;
+        int tens = (n / 10) % 10;
+        int hundreds = (n / 100) % 10;
+        return ones == 1 || tens == 1 || hundreds == 1;
     }
 }
