@@ -20,6 +20,16 @@ public class CopyEvens {
     }
 
     public static int[] copyEvens(int[] nums, int count) {
-        return new int[]{0};
+        int[] evens = new int[count];
+        int position = 0;
+
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                evens[position] = num;
+                position++;
+            }
+            if (position == count) break;
+        }
+        return evens;
     }
 }
