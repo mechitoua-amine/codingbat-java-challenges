@@ -20,13 +20,17 @@ public class ScoreUp {
                         new String[]{"a", "c", "b", "c"}));
         System.out.println(
                 scoreUp(new String[]{"a", "a", "b", "b"},
-                        new String[]{"a", "a", "c", "c"}));
+                        new String[]{"a", "a", "b", "c"}));
         System.out.println(
                 scoreUp(new String[]{"a", "a", "b", "b"},
                         new String[]{"a", "a", "b", "b"}));
     }
 
     public static int scoreUp(String[] key, String[] answers) {
-        return 0;
+        int note = 0;
+        for (int i = 0; i < answers.length; i++)
+            if (answers[i] == key[i]) note += 4;
+            else if (!answers[i].equals("?")) note -= 1;
+        return note;
     }
 }
