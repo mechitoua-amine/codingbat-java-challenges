@@ -1,6 +1,5 @@
 package code.codingbat.ap1;
 
-import java.util.Arrays;
 
 /**
  * Given 2 arrays that are the same length containing strings,
@@ -28,6 +27,11 @@ public class MatchUp {
     }
 
     public static int matchUp(String[] a, String[] b) {
-        return 0;
+        int count = 0;
+        for (int i = 0; i < a.length; i++)
+            if (!a[i].equals("") && !b[i].equals("")
+                    && a[i].charAt(0) == b[i].charAt(0))
+                count++;
+        return count;
     }
 }
