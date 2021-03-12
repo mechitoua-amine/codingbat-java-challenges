@@ -23,6 +23,16 @@ public class WordsWithout {
     }
 
     public static String[] wordsWithout(String[] words, String target) {
-        return new String[]{};
+        // calculate the estimated size of the new array
+        int count = 0;
+        for (String word : words) if (!word.equals(target)) count++;
+
+        String[] result = new String[count];
+        for (int i = 0, pos = 0; i < words.length; i++)
+            if (!words[i].equals(target)) {
+                result[pos] = words[i];
+                pos++;
+            }
+        return result;
     }
 }
