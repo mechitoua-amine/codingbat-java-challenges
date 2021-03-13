@@ -20,6 +20,11 @@ public class SumHeights {
     }
 
     public static int sumHeights(int[] heights, int start, int end) {
-       return 0;
+        int sum = 0;
+        for (int i = start; i <= end-1; i++) {
+            int diff = Math.abs(heights[i] - heights[i+1]);
+            sum += diff;
+        }
+        return sum;
     }
 }
