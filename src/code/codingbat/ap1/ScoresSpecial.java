@@ -20,6 +20,16 @@ public class ScoresSpecial {
     }
 
     public static int scoresSpecial(int[] a, int[] b) {
-        return 0;
+       return largerSpecialScore(a) + largerSpecialScore(b);
+    }
+
+    public static int largerSpecialScore(int... nums) {
+        int largest = 0;
+        for (int num : nums) {
+            if (num % 10 == 0) {
+                largest = Math.max(num, largest);
+            }
+        }
+        return largest;
     }
 }
