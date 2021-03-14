@@ -21,6 +21,11 @@ public class BigHeights {
     }
 
     public static int bigHeights(int[] heights, int start, int end) {
-        return 0;
+        int bigHeightCount = 0;
+        for (int i = start; i <= end-1; i++) {
+            int diff = Math.abs(heights[i] - heights[i+1]);
+            if (diff >= 5) bigHeightCount++;
+        }
+        return bigHeightCount;
     }
 }
