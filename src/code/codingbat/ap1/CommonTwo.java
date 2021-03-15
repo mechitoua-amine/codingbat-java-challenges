@@ -26,6 +26,16 @@ public class CommonTwo {
     }
 
     public static int commonTwo(String[] a, String[] b) {
-        return 0;
+        int count = 0;
+        String lastChecked = null;
+        for (String s : a)
+            if (!s.equals(lastChecked))
+                for (String value : b)
+                    if (s.equals(value)) {
+                        count++;
+                        lastChecked = s;
+                        break;
+                    }
+        return count;
     }
 }
