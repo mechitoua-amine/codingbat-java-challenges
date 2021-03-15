@@ -29,6 +29,20 @@ public class MergeTwo {
     }
 
     public static String[] mergeTwo(String[] a, String[] b, int n) {
-        return new String[]{};
+        String[] result = new String[n];
+        int indexResult = 0;
+        int indexA = 0;
+        int indexB = 0;
+
+        while (indexResult < n)
+            if (a[indexA].compareTo(b[indexB]) < 0)
+                result[indexResult++] = a[indexA++];
+            else if (a[indexA].compareTo(b[indexB]) > 0)
+                result[indexResult++] = b[indexB++];
+            else { // identical strings
+                result[indexResult++] = a[indexA++];
+                indexB++;
+            }
+        return result;
     }
 }
