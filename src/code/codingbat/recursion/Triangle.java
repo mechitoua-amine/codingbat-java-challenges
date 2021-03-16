@@ -20,6 +20,7 @@ public class Triangle {
     }
 
     public static int triangle(int rows) {
-        return 0;
+        if (rows == 0) return 0;
+        return rows + triangle(rows - 1);
     }
 }
