@@ -18,6 +18,7 @@ public class BunnyEars {
     }
 
     public static int bunnyEars(int bunnies) {
-        return 0;
+        if (bunnies == 0) return 0;
+        return 2 + bunnyEars(bunnies - 1);
     }
 }
