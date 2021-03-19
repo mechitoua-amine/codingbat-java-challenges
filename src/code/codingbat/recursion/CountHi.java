@@ -5,18 +5,20 @@ package code.codingbat.recursion;
  * of times lowercase "hi" appears in the string.
  *
  * countHi("xxhixx") → 1
- * counthi("xhixhix") → 2
+ * countHi("xhixhix") → 2
  * countHi("hi") → 1
  */
 
 class CountHi {
     public static void main(String[] args) {
         System.out.println(countHi("xxhixx"));
-        System.out.println(counthi("xhixhix"));
+        System.out.println(countHi("xhixhix"));
         System.out.println(countHi("hi"));
     }
 
     public static int countHi(String str) {
-        return 0;
+        if (str.length() < 2) return 0;
+        if (str.substring(0,2).equals("hi")) return 1 + countHi(str.substring(2));
+        return countHi(str.substring(1));
     }
 }
