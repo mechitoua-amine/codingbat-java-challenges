@@ -20,6 +20,9 @@ class Array6 {
     }
 
     public static boolean array6(int[] nums, int index) {
-        return true;
+        if (nums.length == 0) return false;
+        if (index == nums.length - 1) return nums[index] == 6;
+        if (nums[index] == 6) return true;
+        return array6(nums, index + 1);
     }
 }
