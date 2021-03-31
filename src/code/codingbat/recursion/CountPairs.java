@@ -18,6 +18,11 @@ class CountPairs {
         System.out.println(countPairs("axbx"));
     }
 
-    public static int countPairs(String str){return 0;
+    public static int countPairs(String str){
+        if (str.length() <= 2) return 0;
+        if (str.charAt(0) == str.charAt(2))
+            return 1 + countPairs(str.substring(1));
+
+        return countPairs(str.substring(1));
     }
 }
