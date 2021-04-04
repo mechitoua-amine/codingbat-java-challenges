@@ -17,6 +17,6 @@ public class CountHi2 {
     }
 
     public static int countHi2(String str) {
-        return 0;
+        return 1;
     }
 }
