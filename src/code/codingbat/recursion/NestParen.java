@@ -13,12 +13,15 @@ package code.codingbat.recursion;
 
 class NestParen {
     public static void main(String[] args) {
-        System.out.print(nestParen("(())"));
-        System.out.print(nestParen("((()))"));
-        System.out.print(nestParen("(((x))"));
+        System.out.println(nestParen("(())"));
+        System.out.println(nestParen("((()))"));
+        System.out.println(nestParen("(((x))"));
     }
 
     public static boolean nestParen(String str) {
-        return true;
+        if (str.equals("") || str.equals("()")) return true;
+        if (str.charAt(0) == '(' && str.charAt(str.length()-1) == ')')
+            return nestParen(str.substring(1, str.length()-1));
+        return false;
     }
 }
