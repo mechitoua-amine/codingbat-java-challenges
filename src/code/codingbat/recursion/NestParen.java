@@ -1,0 +1,24 @@
+package code.codingbat.recursion;
+
+
+/**
+ * Given a string, return true if it is a nesting of zero or more
+ * pairs of parenthesis, like "(())" or "((()))". Suggestion: check
+ * the first and last chars, and then recur on what's inside them.
+ *
+ * nestParen("(())") → true
+ * nestParen("((()))") → true
+ * nestParen("(((x))") → false
+ */
+
+class NestParen {
+    public static void main(String[] args) {
+        System.out.print(nestParen("(())"));
+        System.out.print(nestParen("((()))"));
+        System.out.print(nestParen("(((x))"));
+    }
+
+    public static boolean nestParen(String str) {
+        return true;
+    }
+}
