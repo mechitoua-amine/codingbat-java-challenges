@@ -1,7 +1,6 @@
 package code.codingbat.recursion;
 
 /**
- *
  * Given a string that contains a single pair of parenthesis, compute recursively a new string
  * made of only of the parenthesis and their contents, so "xyz(abc)123" yields "(abc)".
  *
@@ -19,6 +18,8 @@ public class ParenBit {
     }
 
     public static String parenBit(String str) {
-        return "";
+        if (!str.substring(0, 1).equals("("))
+            return parenBit(str.substring(1));
+        return (str.substring(0, str.indexOf(")") + 1));
     }
 }
