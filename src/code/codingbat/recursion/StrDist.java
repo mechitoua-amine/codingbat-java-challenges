@@ -17,6 +17,12 @@ public class StrDist {
     }
 
     public static int strDist(String str, String sub) {
-        return 0;
+        if (!str.contains(sub)) return 0;
+        final boolean equals = str.startsWith(sub);
+        if (equals && str.endsWith(sub))
+            return str.length();
+        if (!equals)
+            return strDist(str.substring(1), sub);
+        return strDist(str.substring(0, str.length() - 1), sub);
     }
 }
