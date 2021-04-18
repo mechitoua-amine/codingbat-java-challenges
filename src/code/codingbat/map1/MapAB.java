@@ -15,12 +15,28 @@ import java.util.Map;
 
 public class MapAB {
     public static void main(String[] args) {
-        System.out.println(mapAB(Map.of("a", "Hi", "b", "There")));
-        System.out.println(mapAB(Map.of("a", "Hi")));
-        System.out.println(mapAB(Map.of("b", "There")));
+        System.out.println(mapAB(new HashMap<>(){
+            {
+                put("a", "Hi");
+                put("b", "There");
+            }
+        }));
+        System.out.println(mapAB(new HashMap<>(){
+            {
+                put("a", "Hi");
+            }
+        }));
+        System.out.println(mapAB(new HashMap<>(){
+            {
+                put("b", "There");
+            }
+        }));
     }
 
     public static Map<String, String> mapAB(Map<String, String> map) {
-        return new HashMap<>();
+        if (map.containsKey("a") && map.containsKey("b")) {
+            map.put("ab", map.get("a").concat(map.get("b")));
+        }
+        return map;
     }
 }
