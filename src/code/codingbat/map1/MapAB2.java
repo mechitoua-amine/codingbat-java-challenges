@@ -38,6 +38,13 @@ public class MapAB2 {
     }
 
     public static Map<String, String> mapAB2(Map<String, String> map) {
-        return new HashMap<>();
+        if (map.containsKey("a") && map.containsKey("b")) {
+            boolean isEqual = map.get("a").equals(map.get("b"));
+            if (isEqual) {
+                map.remove("a");
+                map.remove("b");
+            }
+        }
+        return map;
     }
 }
