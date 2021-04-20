@@ -23,7 +23,11 @@ public class Word0 {
         System.out.println(word0(new String[] { "c", "b", "a" }));
     }
 
-    public static Map<String, String> word0(String[] strings) {
-        return new HashMap<>();
+    public static Map<String, Integer> word0(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String string : strings) {
+            map.put(string, 0);
+        }
+        return map;
     }
 }
