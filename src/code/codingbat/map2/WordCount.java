@@ -21,6 +21,17 @@ public class WordCount {
     }
 
     public static Map<String, Integer> wordCount(String[] strings) {
-        return new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
+
+        for (String str : strings) {
+            if (map.containsKey(str)) {
+                int count = map.get(str);
+                map.put(str, count + 1);
+            } else {
+                map.put(str, 1);
+            }
+        }
+
+        return map;
     }
 }
