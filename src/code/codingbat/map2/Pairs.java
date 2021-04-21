@@ -21,6 +21,13 @@ public class Pairs {
     }
 
     public static Map<String, String> pairs(String[] strings) {
-        return new HashMap<>();
+        Map<String, String> map = new HashMap<>();
+        for (String str : strings) {
+            map.put(
+                    String.valueOf(str.charAt(0)),
+                    String.valueOf(str.charAt(str.length() - 1))
+            );
+        }
+        return map;
     }
 }
