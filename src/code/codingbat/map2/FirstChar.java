@@ -18,12 +18,25 @@ import java.util.Map;
 
 public class FirstChar {
     public static void main(String[] args) {
-        System.out.println(firstChar(new String[] {"salt", "tea", "soda", "toast"}));
-        System.out.println(firstChar((new String[] {"aa", "bb", "cc", "aAA", "cCC", "d"})));
-        System.out.println(firstChar((new String[] {})));
+        System.out.println(firstChar(
+                new String[] {"salt", "tea", "soda", "toast"}));
+        System.out.println(firstChar(
+                new String[] {"aa", "bb", "cc", "aAA", "cCC", "d"}));
+        System.out.println(firstChar(
+                new String[] {}));
     }
 
     public static Map<String, String> firstChar(String[] strings) {
-        return new HashMap<>();
+        Map<String, String> map = new HashMap<>();
+
+        for (String string : strings) {
+            String key = String.valueOf(string.charAt(0));
+            if (map.containsKey(key)) {
+                String val = map.get(key) + string;
+                map.put(key, val);
+            } else map.put(key, string);
+        }
+
+        return map;
     }
 }
