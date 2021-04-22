@@ -21,6 +21,19 @@ public class WordMultiple {
     }
 
     public static Map<String, Boolean> wordMultiple(String[] strings) {
-        return new HashMap<>();
+        Map<String, Integer> count = new HashMap<>();
+        Map<String, Boolean> result = new HashMap<>();
+
+        for (String str : strings) {
+            if (count.containsKey(str)) {
+                int val = count.get(str);
+                val++;
+                count.put(str, val);
+            } else count.put(str, 1);
+
+            result.put(str, count.get(str) >= 2);
+        }
+
+        return result;
     }
 }
