@@ -1,6 +1,8 @@
 package code.codingbat.map2;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * We'll say that 2 strings "match" if they are non-empty and their first chars
@@ -29,6 +31,25 @@ class FirstSwap {
     }
 
     public static String[] firstSwap(String[] strings) {
-        return new String[] {};
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < strings.length; i++) {
+            String key = String.valueOf(strings[i].charAt(0));
+
+            if (map.containsKey(key)) {
+                int val = map.get(key);
+                if (val == -1)
+                    continue;
+                // swap
+                int pos = map.get(key);
+                String tmp = strings[pos];
+                strings[pos] = strings[i];
+                strings[i] = tmp;
+                // set a flag
+                map.put(key, -1);
+            } else
+                map.put(key, i);
+        }
+
+        return strings;
     }
 }
