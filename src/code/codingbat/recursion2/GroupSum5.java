@@ -1,7 +1,5 @@
 package code.codingbat.recursion2;
 
-import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
-
 /**
  * Given an array of ints, is it possible to choose a group of some of the ints,
  * such that the group sums to the given target with these additional
@@ -24,6 +22,16 @@ public class GroupSum5 {
     }
 
     public static Boolean groupSum5(int start, int[] nums, int target) {
-        return true;
+        if (start >= nums.length)
+            return target == 0;
+
+        if (nums[start] % 5 == 0) {
+            if (start <= nums.length - 2 && nums[start + 1] == 1)
+                return groupSum5(start + 2, nums, target - nums[start]);
+
+            return groupSum5(start + 1, nums, target - nums[start]);
+        }
+
+        return groupSum5(start + 1, nums, target - nums[start]) || groupSum5(start + 1, nums, target);
     }
 }
