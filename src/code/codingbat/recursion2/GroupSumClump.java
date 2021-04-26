@@ -25,6 +25,16 @@ public class GroupSumClump {
     }
 
     public static boolean groupSumClump(int start, int[] nums, int target) {
-        return true;
+        if (start >= nums.length)
+            return target == 0;
+
+        int sum = nums[start];
+        int count = 1;
+        for (int i = start + 1; i < nums.length; i++)
+            if (nums[i] == nums[start]) {
+                sum += nums[i];
+                count++;
+            }
+        return groupSumClump(start + count, nums, target - sum) || groupSumClump(start + count, nums, target);
     }
 }
