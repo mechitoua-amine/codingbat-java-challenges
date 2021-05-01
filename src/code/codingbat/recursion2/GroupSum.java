@@ -11,7 +11,10 @@ package code.codingbat.recursion2;
  * passing start as 0. No loops are needed -- the recursive calls progress down
  * the array.
  *
- * groupSum(0, [2, 4, 8], 10) → true groupSum(0, [2, 4, 8], 14) → true
+ * groupSum(0, [2, 4, 8], 10) → true
+ *
+ * groupSum(0, [2, 4, 8], 14) → true
+ *
  * groupSum(0, [2, 4, 8], 9) → false
  */
 

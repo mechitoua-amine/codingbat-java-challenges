@@ -20,7 +20,18 @@ class Split53 {
         System.out.println(split53(2, 4, 2));
     }
 
-    public static Boolean split53(int... nums) {
-        return true;
+    public static boolean split53(int... nums) {
+        return helper(0, nums, 0, 0);
+    }
+
+    private static boolean helper(int start, int[] nums, int sum1, int sum2) {
+        if (start >= nums.length)
+            return sum1 == sum2;
+        if (nums[start] % 5 == 0)
+            return helper(start + 1, nums, sum1 + nums[start], sum2);
+        if (nums[start] % 3 == 0)
+            return helper(start + 1, nums, sum1, sum2 + nums[start]);
+
+        return helper(start + 1, nums, sum1 + nums[start], sum2) || helper(start + 1, nums, sum1, sum2 + nums[start]);
     }
 }
