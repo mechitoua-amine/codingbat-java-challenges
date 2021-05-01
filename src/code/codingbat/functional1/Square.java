@@ -20,6 +20,7 @@ public class Square {
     }
 
     public static List<Integer> square(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.replaceAll(num -> num * num);
+        return nums;
     }
 }
