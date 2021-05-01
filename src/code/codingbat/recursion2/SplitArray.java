@@ -15,7 +15,7 @@ package code.codingbat.recursion2;
  * splitArray([5, 2, 3]) → true
  */
 
-public class SplitArray {
+class SplitArray {
     public static void main(String[] args) {
         System.out.println(splitArray(2, 2));
         System.out.println(splitArray(2, 3));

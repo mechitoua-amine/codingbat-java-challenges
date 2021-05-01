@@ -14,7 +14,7 @@ package code.codingbat.recursion2;
  * groupSum5(0, [2, 5, 10, 4], 12) → false
  */
 
-public class GroupSum5 {
+class GroupSum5 {
     public static void main(String[] args) {
         System.out.println(groupSum5(0, new int[] { 2, 5, 10, 4 }, 19));
         System.out.println(groupSum5(0, new int[] { 2, 5, 10, 4 }, 17));
