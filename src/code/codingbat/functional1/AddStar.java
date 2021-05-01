@@ -21,6 +21,7 @@ public class AddStar {
     }
 
     public static List<String> addStar(List<String> strings) {
-        return new ArrayList<>();
+        strings.replaceAll(str -> str + "*");
+        return strings;
     }
 }
