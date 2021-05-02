@@ -3,6 +3,7 @@ package code.codingbat.functional1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Given a list of strings, return a list where each string is replaced
@@ -21,6 +22,7 @@ public class Copies3 {
     }
 
     public static List<String> copies3(List<String> strings) {
-        return new ArrayList<>();
+        strings.replaceAll(str -> str+str+str);
+        return strings;
     }
 }
