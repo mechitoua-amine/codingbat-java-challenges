@@ -22,6 +22,7 @@ public class Math1 {
     }
 
     public static List<Integer> math1(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.replaceAll(num -> (num + 1) * 10);
+        return nums;
     }
 }
