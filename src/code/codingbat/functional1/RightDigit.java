@@ -21,6 +21,7 @@ public class RightDigit {
     }
 
     public static List<Integer> rightDigit(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.replaceAll(num -> num % 10);
+        return nums;
     }
 }
