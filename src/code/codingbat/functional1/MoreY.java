@@ -23,6 +23,7 @@ public class MoreY {
     }
 
     public static List<String> moreY(List<String> strings) {
-        return new ArrayList<>();
+        strings.replaceAll(str -> "y"+str+"y");
+        return strings;
     }
 }
