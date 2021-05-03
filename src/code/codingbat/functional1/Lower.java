@@ -3,6 +3,7 @@ package code.codingbat.functional1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Given a list of strings, return a list where each string is converted
@@ -21,6 +22,7 @@ public class Lower {
     }
 
     public static List<String> lower(List<String> strings) {
-        return new ArrayList<>();
+        strings.replaceAll(String::toLowerCase);
+        return strings;
     }
 }
