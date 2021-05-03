@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Given a list of strings, return a list where each string has all its "x" removed.
@@ -21,6 +22,7 @@ public class NoX {
     }
 
     public static List<String> noX(List<String> strings) {
-        return new ArrayList<>();
+        strings.replaceAll(str -> str.replaceAll("x", ""));
+        return strings;
     }
 }
