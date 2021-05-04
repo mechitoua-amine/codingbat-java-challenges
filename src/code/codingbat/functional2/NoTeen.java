@@ -22,6 +22,7 @@ public class NoTeen {
     }
 
     public static List<Integer> noTeen(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.removeIf(n -> n >= 13 && n <= 19);
+        return nums;
     }
 }
