@@ -21,6 +21,7 @@ public class NoNeg {
     }
 
     public static List<Integer> noNeg(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.removeIf(n -> n < 0);
+        return nums;
     }
 }
