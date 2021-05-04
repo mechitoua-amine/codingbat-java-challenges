@@ -21,7 +21,8 @@ public class No9 {
     }
 
     public static List<Integer> no9(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.removeIf(n -> n % 10 == 9);
+        return nums;
     }
 
 }
