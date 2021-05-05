@@ -3,6 +3,7 @@ package code.codingbat.functional2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -23,6 +24,8 @@ public class NoYY {
     }
 
     public static List<String> noYY(List<String> strings) {
-        return new ArrayList<>();
+        strings.replaceAll(str -> str + "y");
+        strings.removeIf(str -> str.contains("yy"));
+        return strings;
     }
 }
