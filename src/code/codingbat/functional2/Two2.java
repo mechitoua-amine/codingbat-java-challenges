@@ -1,9 +1,8 @@
 package code.codingbat.functional2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 /**
  * Given a list of non-negative integers, return a list of those numbers
@@ -22,6 +21,8 @@ public class Two2 {
     }
 
     public static List<Integer> two2(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.replaceAll(n -> n * 2);
+        nums.removeIf(n -> n % 10 == 2);
+        return nums;
     }
 }
