@@ -12,7 +12,7 @@ import java.util.List;
  *
  * square56([3, 1, 4]) → [19, 11]
  * square56([1]) → [11]
- * square56([2]) → [14
+ * square56([2]) → [14]
  */
 
 public class Square56 {
@@ -23,6 +23,8 @@ public class Square56 {
     }
 
     public static List<Integer> square56(List<Integer> nums) {
-        return new ArrayList<>();
+        nums.replaceAll(n -> (n * n) + 10);
+        nums.removeIf(n -> n % 10 == 5 || n % 10 == 6);
+        return nums;
     }
 }
