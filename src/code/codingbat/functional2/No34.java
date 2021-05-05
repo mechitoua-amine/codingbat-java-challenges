@@ -23,6 +23,7 @@ public class No34 {
     }
 
     public static List<String> no34(List<String> strings) {
-        return new ArrayList<>();
+        strings.removeIf(str -> str.length() == 3 || str.length() == 4);
+        return strings;
     }
 }
