@@ -21,6 +21,7 @@ public class NoZ {
     }
 
     public static List<String> noZ(List<String> strings) {
-        return new ArrayList<>();
+        strings.removeIf(str -> str.contains("z"));
+        return strings;
     }
 }
