@@ -21,6 +21,7 @@ public class NoLong {
     }
 
     public static List<String> noLong(List<String> strings) {
-        return new ArrayList<>();
+        strings.removeIf(str -> str.length() >= 4);
+        return strings;
     }
 }
